@@ -1,0 +1,80 @@
+{
+  "name": "@workspace/pattern",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write \"**/*.{ts,tsx}\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@shadcn/react": "^0.3.1",
+    "@workspace/shadcn-ui": "workspace:*",
+    "lucide-react": "^1.62.0",
+    "radix-ui": "^1.8.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
+    "eslint": "^10",
+    "tsdown": "^0.23.2",
+    "typescript": "^5"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./accordion": {
+      "types": "./dist/accordion/index.d.ts",
+      "import": "./dist/accordion/index.js",
+      "default": "./dist/accordion/index.js"
+    },
+    "./code-block": {
+      "types": "./dist/code-block/index.d.ts",
+      "import": "./dist/code-block/index.js",
+      "default": "./dist/code-block/index.js"
+    },
+    "./questionnaire": {
+      "types": "./dist/questionnaire/index.d.ts",
+      "import": "./dist/questionnaire/index.js",
+      "default": "./dist/questionnaire/index.js"
+    },
+    "./tabs": {
+      "types": "./dist/tabs/index.d.ts",
+      "import": "./dist/tabs/index.js",
+      "default": "./dist/tabs/index.js"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js",
+      "default": "./dist/*.js"
+    },
+    "./collapsible": {
+      "types": "./dist/collapsible/index.d.ts",
+      "import": "./dist/collapsible/index.js",
+      "default": "./dist/collapsible/index.js"
+    },
+    "./dropdown": {
+      "types": "./dist/dropdown/index.d.ts",
+      "import": "./dist/dropdown/index.js",
+      "default": "./dist/dropdown/index.js"
+    }
+  }
+}
